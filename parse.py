@@ -25,6 +25,7 @@ weekArray = []
 finalData = []
 finalData.append( ["weeklyChange", "day1Rate", "day2Rate", "day3Rate", "day4Rate", "day5Rate", "day1Range", "day2Range", "day3Range", "day4Range", "day5Range", "weeklyVolume"] )
 
+
 with open('AAPL.csv') as csvfile:
     myReader = csv.reader(csvfile, delimiter=',', skipinitialspace=True)
     for row in myReader:
