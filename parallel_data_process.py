@@ -1,14 +1,19 @@
 import os, multiprocessing as mp
 
 # process file function
+
+filename = 'AAPL.csv'
+
+
 def processfile(filename, start=0, stop=0):
     if start == 0 and stop == 0:
-        ... process entire file...
+#         ... process entire file...
+        pass
     else:
-        with open(file, 'r') as fh:
+        with open(filename, 'r') as fh:
             fh.seek(start)
             lines = fh.readlines(stop - start)
-            ... process these lines ...
+#             ... process these lines ...
 
     return results
 
@@ -22,13 +27,13 @@ if __name__ == "__main__":
     if filesize > split_size:
 
         # create pool, initialize chunk start location (cursor)
-        pool = mp.Pool(cpu_count)
+        pool = mp.Pool(mp.cpu_count)
         cursor = 0
         results = []
-        with open(file, 'r') as fh:
+        with open(filename, 'r') as fh:
 
             # for every chunk in the file...
-            for chunk in xrange(filesize // split_size):
+            for chunk in range(filesize // split_size):
 
                 # determine where the chunk ends, is it the last one?
                 if cursor + split_size > filesize:
@@ -60,4 +65,4 @@ if __name__ == "__main__":
             processfile_result = proc.get()
 
     else:
-        ...process normally...
+#         ...process normally...

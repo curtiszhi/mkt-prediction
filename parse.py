@@ -27,6 +27,7 @@ day5 = []
 
 weekArray = []
 
+
 with open('AAPL.csv') as csvfile:
     myReader = csv.reader(csvfile, delimiter=',', skipinitialspace=True)
     for row in myReader:
