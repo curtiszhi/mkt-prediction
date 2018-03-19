@@ -30,8 +30,8 @@ finalData.append( ["weeklyChange", "day1Rate", "day2Rate", "day3Rate", "day4Rate
 with open(filaname) as csvfile:
     myReader = csv.reader(csvfile, delimiter=',', skipinitialspace=True)
     for row in myReader:
-    	if row[0] != 'ticker':
-	    	if rowNum == 5:
+        if row[0] != 'ticker':
+            if rowNum == 5:
 	    		rowNum = 0
 	    		#print("day5: ", volume)
 	    		weeklyChange = float(weekArray[4][1]) - float(weekArray[0][0])
@@ -52,9 +52,9 @@ with open(filaname) as csvfile:
 
 
 	    	#open, close, high, low, volume
-	    	dayArray = []
-	    	dayArray.append(row[9]) #open
-	    	dayArray.append(row[12]) #close
+        dayArray = []
+        	dayArray.append(row[9]) #open
+     	dayArray.append(row[12]) #close
 	    	dayArray.append(row[10]) #high
 	    	dayArray.append(row[11]) #low
 	    	dayArray.append(row[13]) #volume
