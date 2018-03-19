@@ -2,7 +2,7 @@ import os, multiprocessing as mp
 
 # process file function
 
-filename = 'AAPL.csv'
+filename = 'Users/curtiszhi/Desktop/Archives/BoA/MARK/stock_data/AAPL.csv'
 
 
 def processfile(filename, start=0, stop=0):

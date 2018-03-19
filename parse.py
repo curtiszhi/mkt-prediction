@@ -1,5 +1,7 @@
 import csv 
 import sys
+
+filaname = 'Users/curtiszhi/Desktop/Archives/BoA/MARK/stock_data/AAPL.csv'
  
 # f = open('AAPL.csv', newline='') 
 # reader = csv.reader(f)
@@ -28,7 +30,7 @@ day5 = []
 weekArray = []
 
 
-with open('AAPL.csv') as csvfile:
+with open(filaname) as csvfile:
     myReader = csv.reader(csvfile, delimiter=',', skipinitialspace=True)
     for row in myReader:
     	if row[0] != 'ticker':
